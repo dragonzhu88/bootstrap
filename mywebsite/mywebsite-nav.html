@@ -11,26 +11,62 @@
 <style>
     body {
         padding-top: 50px;
+        font-family: "Microsoft YaHei UI";
+        padding-bottom: 50px;
     }
 
     .carousel {
         height: 500px;
         background: #000;
+        margin-bottom: 60px;
     }
 
-    .carousel .item{
+    .carousel .item {
         height: 500px;
         background-color: #000;
     }
 
-    .carousel img{
+    .carousel img {
         width: 100%;
     }
 
-    .carousel-caption p{
+    .carousel-caption p {
         margin-bottom: 20px;
         font-size: 20px;
-        line-height:1.8;
+        line-height: 1.8;
+    }
+
+    #summary-container .col-md-4 {
+        text-align: center;
+    }
+
+    .divider {
+        margin: 40px;
+    }
+
+    .image_thumb {
+        width: 80%;
+        height: 80%;
+    }
+
+    .feature-heading {
+        font-size: 40px;
+        margin-top: 50px;
+        color: aqua;
+
+    }
+
+    .feature-heading {
+        font-size: 40px;
+        margin-top: 50px;
+        color: aqua;
+    }
+
+    .feature-heading .text-muted{
+
+        font-size: 28px;
+
+        color: rgba(56, 56, 56, 0.73);
     }
 
 </style>
@@ -42,7 +78,7 @@
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
+                    data-target="#demo-navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -52,7 +88,7 @@
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse" id="demo-navbar">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">首页</a></li>
 
@@ -60,12 +96,12 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">功能 <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li role="presentation" class="dropdown-header">业务功能</li>
-                        <li><a href="#">信息建立</a></li>
-                        <li><a href="#">信息查询</a></li>
-                        <li><a href="#">信息管理</a></li>
+                        <li><a href="#testing1">信息建立</a></li>
+                        <li><a href="#testing2">信息查询</a></li>
+                        <li><a href="#testing3">信息管理</a></li>
                         <li class="divider"></li>
                         <li role="presentation" class="dropdown-header">系统功能</li>
-                        <li><a href="#">设置</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#setting">设置</a></li>
                     </ul>
                 </li>
                 <li><a href="#">帮助</a></li>
@@ -145,6 +181,154 @@
         <span class="sr-only">下一页</span>
     </a>
 </div>
+
+<div class="container" id="summary-container">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="/bootstrap/mywebsite/images/1.jpg" class="image_thumb" alt="1 slide">
+            <h2>测试1</h2>
+            <p>这是一个测试段落</p>
+            <p><a class="btn btn-lg btn-primary" target="_blank" role="button">点我下载</a></p>
+
+        </div>
+        <div class="col-md-4">
+            <img src="/bootstrap/mywebsite/images/2.jpg" class="image_thumb" alt="1 slide">
+            <h2>测试2</h2>
+            <p>这是一个测试段落</p>
+            <p><a class="btn btn-lg btn-primary" target="_blank" role="button">点我下载</a></p>
+        </div>
+        <div class="col-md-4">
+            <img src="/bootstrap/mywebsite/images/3.jpg" class="image_thumb" alt="1 slide">
+            <h2>测试3</h2>
+            <p>这是一个测试段落</p>
+            <p><a class="btn btn-lg btn-primary" target="_blank" role="button">点我下载</a></p>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!--<div class="row">-->
+        <!--<div class="col-sm-6 col-md-4">-->
+            <!--<div class="thumbnail">-->
+                <!--<img src="/bootstrap/mywebsite/images/1.jpg" class="image_thumb" alt="1 slide">-->
+                <!--<div class="caption">-->
+                    <!--<h3>ce'shi</h3>-->
+                    <!--<p>这是一个测试段落</p>-->
+                    <!--<p><a class="btn btn-primary" target="_blank" role="button">点我下载</a></p>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-sm-6 col-md-4">-->
+            <!--<div class="thumbnail">-->
+                <!--<img src="/bootstrap/mywebsite/images/1.jpg" class="image_thumb" alt="1 slide">-->
+                <!--<div class="caption">-->
+                    <!--<h3>ce'shi</h3>-->
+                    <!--<p>这是一个测试段落</p>-->
+                    <!--<p><a class="btn btn-primary" target="_blank" role="button">点我下载</a></p>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-sm-6 col-md-4">-->
+            <!--<div class="thumbnail">-->
+                <!--<img src="/bootstrap/mywebsite/images/1.jpg" class="image_thumb" alt="1 slide">-->
+                <!--<div class="caption">-->
+                    <!--<h3>ce'shi</h3>-->
+                    <!--<p>这是一个测试段落</p>-->
+                    <!--<p><a class="btn btn-primary" target="_blank" role="button">点我下载</a></p>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <ul class="nav nav-tabs" role="tablist" id="tab-list">
+        <li class="active"><a href="#testing1" role="tab" data-toggle="tab">测试1</a></li>
+        <li><a href="#testing2" role="tab" data-toggle="tab">测试2</a></li>
+        <li><a href="#testing3" role="tab" data-toggle="tab">测试3</a></li>
+        <li><a href="#testing4" role="tab" data-toggle="tab">测试4</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="testing1">
+            <div class="col-md-7">
+                <h2 class="feature-heading">测试<span class="text-muted">muted1</span></h2>
+                <p class="lead">测试1</p>
+            </div>
+            <div class="col-md-5">
+                <img src="/bootstrap/mywebsite/images/1.jpg" class="feature-image img-responsive" alt="1 slide">
+            </div>
+        </div>
+        <div class="tab-pane" id="testing2">
+            <div class="col-md-5">
+                <img src="/bootstrap/mywebsite/images/2.jpg" class="feature-image img-responsive" alt="2 slide">
+            </div>
+            <div class="col-md-7">
+                <h2 class="feature-heading">测试<span class="text-muted">muted2</span></h2>
+                <p class="lead">测试2</p>
+            </div>
+        </div>
+
+        <div class="tab-pane" id="testing3">
+            <div class="col-md-7">
+                <h2 class="feature-heading">测试<span class="text-muted">muted3</span></h2>
+                <p class="lead">测试3</p>
+            </div>
+            <div class="col-md-5">
+                <img src="/bootstrap/mywebsite/images/3.jpg" class="feature-image img-responsive" alt="3 slide">
+            </div>
+        </div>
+        <div class="tab-pane" id="testing4">
+            <div class="col-md-5">
+                <img src="/bootstrap/mywebsite/images/4.jpg" class="feature-image img-responsive" alt="4 slide">
+            </div>
+            <div class="col-md-7">
+                <h2 class="feature-heading">测试<span class="text-muted">muted4</span></h2>
+                <p class="lead">测试4</p>
+            </div>
+        </div>
+    </div>
+
+    <hr class="divider">
+    <footer>
+        <p class="pull-right"><a href="#top">回到顶部</a></p>
+        <p>Copyright © 2017 dragon 保留所有权利。</p>
+    </footer>
+
+</div>
+
+
+
+
+
+<div class="modal fade" id="setting">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">设置</h4>
+            </div>
+            <div class="modal-body">
+                <p>One fine body&hellip;</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">确定</button>
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script>
+    $(document).ready(function () {
+        $("#demo-navbar .dropdown-menu a").on("click",function () {
+
+            var href = $(this).attr("href");
+         //   alert(href);
+
+            $("#tab-list a[href='"+ href +"']").tab("show");
+        })
+    });
+</script>
+
 
 </body>
 </html>
